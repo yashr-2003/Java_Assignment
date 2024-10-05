@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v11.11 (32 bit)
-MySQL - 5.1.44-community : Database - java_assesment
+MySQL - 5.1.44-community : Database - mps
 *********************************************************************
 */
 
@@ -12,26 +12,24 @@ MySQL - 5.1.44-community : Database - java_assesment
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`java_assesment` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`mps` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `java_assesment`;
+USE `mps`;
 
-/*Table structure for table `add_course` */
+/*Table structure for table `user` */
 
-DROP TABLE IF EXISTS `add_course`;
+DROP TABLE IF EXISTS `user`;
 
-CREATE TABLE `add_course` (
-  `Course_Id` int(5) NOT NULL,
-  `Course_Name` varchar(50) DEFAULT NULL,
-  `Course_Fees` int(7) DEFAULT NULL,
-  `Course_Duration` varchar(20) DEFAULT NULL,
-  `Course_Detail` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`Course_Id`)
+CREATE TABLE `user` (
+  `userid` int(10) NOT NULL,
+  `firstname` varchar(10) NOT NULL,
+  `lastname` varchar(10) DEFAULT NULL,
+  `email` varchar(10) NOT NULL,
+  `mobile` int(15) NOT NULL,
+  PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-/*Data for the table `add_course` */
-
-insert  into `add_course`(`Course_Id`,`Course_Name`,`Course_Fees`,`Course_Duration`,`Course_Detail`) values (1,'yash',90,'90','op');
+/*Data for the table `user` */
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
