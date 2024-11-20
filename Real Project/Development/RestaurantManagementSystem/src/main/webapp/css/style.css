@@ -1,0 +1,181 @@
+:root {
+    --primary: #FEA116;
+    --light: #F1F8FF;
+    --dark: #0F172B;
+    --border-radius: 8px;
+    --transition-speed: 0.5s;
+}
+
+/* Base Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.font-pacifico {
+    font-family: 'Pacifico', cursive;
+}
+
+.font-nunito {
+    font-family: 'Nunito', sans-serif;
+}
+
+.fw-semi-bold {
+    font-weight: 700;
+}
+
+.fw-medium {
+    font-weight: 600;
+}
+
+.transition {
+    transition: var(--transition-speed);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* General Button Styles */
+.btn {
+    font-family: var(--font-nunito);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: var(--transition-speed);
+}
+
+.btn-primary,
+.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square, .btn-sm-square, .btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 2px;
+}
+
+.btn-square { width: 38px; height: 38px; }
+.btn-sm-square { width: 32px; height: 32px; }
+.btn-lg-square { width: 48px; height: 48px; }
+
+/* Navbar */
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--light) !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: var(--transition-speed);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* Hero Header */
+.hero-header {
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg) no-repeat center center / cover;
+}
+
+/* Section Title */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before, .section-title::after {
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    background: var(--primary);
+}
+
+.section-title::before {
+    left: -55px;
+}
+
+.section-title::after {
+    right: -55px;
+}
+
+.section-title.text-start::before,
+.section-title.text-end::after {
+    display: none;
+}
+
+/* Card Styles */
+.booking-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: var(--transition-speed);
+}
+
+.booking-card:hover {
+    transform: translateY(-10px);
+}
+
+.booking-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+/* Restaurant Name Style */
+.booking-card h5 {
+    font-size: 1.5rem;
+    font-weight: var(--fw-semi-bold);
+    text-align: center;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: var(--transition-speed);
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    transition: var(--transition-speed);
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+/* Miscellaneous */
+.pointer {
+    cursor: pointer;
+}
+
